@@ -9,7 +9,12 @@
 }
 
 body {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Helvetica Neue',
+    Arial,
+    'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans',
+    Meiryo,
+    sans-serif;
     font-size: 1rem;
     background-color: #222;
     opacity: 0;
@@ -32,14 +37,19 @@ a:visited {
 }
 
 h2 {
-    font-size: 72px;
-    font-family: 'Damion', cursive;
-    font-weight: 900;
+    font-size: 88px;
+    /* font-family: 'Damion', cursive; */
+    font-weight: 100;
     background-clip: text;
     -webkit-background-clip: text;
     background-image: url(img/gradie.png);
     background-size: contain;
     color: transparent;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: normal;
 }
 
 .section-titles {
@@ -170,18 +180,29 @@ main {
     margin-top: 50px;
 }
 
-/* slide-fore */
+/* slide-fore (About)*/
 .slide-fore {
     position: relative;
-    display: flex;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+    gap: 20px;
     max-width: 1000px;
-    height: 500px;
     margin: 0 auto;
+}
+
+@media (max-width: 630px) {
+    .slide-fore {
+        flex-direction: column;
+    }
 }
 
 .slide-fore img {
     filter: brightness(0.5);
+}
+
+.slide-fore th {
+    padding-right: 15px;
 }
 
 .sf2-base,
@@ -193,7 +214,7 @@ main {
 
 .sf-base {
     text-align: left;
-    padding: 50px;
+    padding: 20px;
     color: aliceblue;
 }
 
@@ -220,8 +241,8 @@ main {
 
 @media (max-width: 630px) {
     .slide-fore {
-        flex-direction: column;
         height: 700px;
+        width: 95%;
     }
 
     .sf-base,
@@ -246,6 +267,64 @@ main {
         left: 0;
     }
 }
+
+/* ポートフォリオ */
+
+.portforio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    row-gap: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+    color: aliceblue;
+}
+:root {
+    --foriobg: #a0437c;
+}
+
+.forio-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--foriobg);
+    border: 4px solid var(--foriobg);
+    box-shadow: 0px 10px 0px -1px rgb(165, 2, 143);
+    overflow: hidden;
+    transition: .05s;
+}
+
+.forio-card:active {
+    transform: translateY(8px);
+    box-shadow: 0px 2px 0px -1px rgb(165, 2, 143);
+}
+
+.forio-card img {
+    transition: .5s;
+}
+
+.forio-card:hover img{
+    filter: brightness(1.2);
+    transform: scale(1.1);
+}
+
+.forio-card-r {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    border-top: 4px solid var(--foriobg);
+    background-color: var(--foriobg);
+    z-index: 10;
+}
+
+/* 練習 */
+.renshuu {
+    text-align: center;
+    line-height: 50;
+    color: aliceblue;
+}
+
+
 
 /* slide-images */
 .slide-area {
@@ -448,7 +527,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     row-gap: 30px;
-    padding: 50px;
+    padding: 0 50px 20px;
     justify-content: center;
 }
 .flex-card {
@@ -506,7 +585,7 @@ main {
     line-height: 2;
     padding: 0 10px;
     border-radius: 5px;
-    background-color: rgb(35, 121, 155);
+    background-color: rgb(44, 145, 185);
     transition: .15s;
 }
 
@@ -529,6 +608,6 @@ main {
 
 /* フッター */
 footer {
-    height: 1000px;
+    height: 100px;
     background-color: #ccc;
 }
