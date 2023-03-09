@@ -165,35 +165,37 @@
         })
         .to('.bone', {
             yPercent: -190,
-            duration: 1,
+            duration: 1.5,
         })
         .to('.btwo', {
             xPercent:90,
-            duration: 1,
+            duration: 1.5,
         },'<')
         .to('.bthree', {
             yPercent:90,
-            duration: 1,
+            duration: 1.5,
         },'<')
         .to('.bfore', {
             xPercent: -190,
-            duration: 1,
+            duration: 1.5,
         },'<')
         .to('.bc', {
             rotate: 360,
-            duration: 1,
+            duration: 1.5,
         },'<')
         .to('.bd', {
             rotate: -360,
-            duration: 1,
+            duration: 1.5,
         },'<')
         .to('.bbase', {
             scale: 1.7,
-            duration: 1,
+            duration: 1.5,
+            ease: 'none',
         },'<')
         .to('.bbase p', {
-            scale: .7,
-            duration: 1,
+            scale: .59,
+            duration: 1.5,
+            ease: 'none',
         },'<');
 
 

@@ -317,6 +317,14 @@ main {
     z-index: 10;
 }
 
+@media (max-width: 630px) {
+    .portforio {
+        grid-template-columns: 95%;
+        place-content: center;
+        padding: 0;
+    }
+}
+
 /* 練習 */
 .renshuu {
     text-align: center;
@@ -488,8 +496,9 @@ main {
     display: grid;
     place-items: center;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 20vw;
+    max-width: 100px;
+    aspect-ratio: 1/ 1;
     color: aliceblue;
     font-size: 50px;
     font-weight: 900;
