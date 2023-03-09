@@ -109,10 +109,10 @@
             let img2 = document.querySelector('.rotateArea2 img');
 
             gsap.to(img, {
-                rotate: 360,
+                rotate: 3600,
                 ease: 'none',
                 scrollTrigger: {
-                    scrub: 2
+                    scrub: 3
                 },
             });
 
