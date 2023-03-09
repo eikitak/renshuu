@@ -57,12 +57,12 @@ h3 {
     text-align: center;
 }
 
-.section-titles p {
+/* .section-titles p {
     margin-top: 8px;
     color: aliceblue;
     mix-blend-mode: difference;
 
-}
+} */
 
 @media (max-width: 630px) {
     h2 {
@@ -620,6 +620,17 @@ main {
 
 /* フッター */
 footer {
-    height: 100px;
-    background-color: #ccc;
+    display: grid;
+    place-items: center;
+    height: 200px;
+}
+
+footer p {
+    display: flex;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+footer span {
+    display: inline-block;
 }

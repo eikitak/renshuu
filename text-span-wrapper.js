@@ -43,7 +43,7 @@
         }
     }
 
-    const tx =  document.querySelectorAll('.text p');
+    const tx =  document.querySelectorAll('footer p');
     tx.forEach(el => {
         new SpanWrap(el);
     });

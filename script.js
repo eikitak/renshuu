@@ -163,40 +163,77 @@
             repeat: -1,
             repeatDelay: .5,
         })
-        .to('.bone', {
-            yPercent: -190,
-            duration: 1.5,
-        })
-        .to('.btwo', {
-            xPercent:90,
-            duration: 1.5,
-        },'<')
-        .to('.bthree', {
-            yPercent:90,
-            duration: 1.5,
-        },'<')
-        .to('.bfore', {
-            xPercent: -190,
-            duration: 1.5,
-        },'<')
-        .to('.bc', {
-            rotate: 360,
-            duration: 1.5,
-        },'<')
-        .to('.bd', {
-            rotate: -360,
-            duration: 1.5,
-        },'<')
-        .to('.bbase', {
-            scale: 1.7,
-            duration: 1.5,
-            ease: 'none',
-        },'<')
-        .to('.bbase p', {
-            scale: .59,
-            duration: 1.5,
-            ease: 'none',
-        },'<');
+            .to('.bone', {
+                yPercent: -190,
+                duration: 1.5,
+            })
+            .to('.btwo', {
+                xPercent: 90,
+                duration: 1.5,
+            }, '<')
+            .to('.bthree', {
+                yPercent: 90,
+                duration: 1.5,
+            }, '<')
+            .to('.bfore', {
+                xPercent: -190,
+                duration: 1.5,
+            }, '<')
+            .to('.bc', {
+                rotate: 360,
+                duration: 1.5,
+            }, '<')
+            .to('.bd', {
+                rotate: -360,
+                duration: 1.5,
+            }, '<')
+            .to('.bbase', {
+                scale: 1.7,
+                duration: 1.5,
+                ease: 'none',
+            }, '<')
+            .to('.bbase p', {
+                scale: .59,
+                duration: 1.5,
+                ease: 'none',
+            }, '<');
+
+
+        // footer
+
+       
+            gsap.timeline({
+                ease: 'power4.inOut',
+                repeatDelay: 1,
+                repeat: -1,
+                scrollTrigger: {
+                    trigger: 'footer',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    toggleActions: 'play pause play pause',
+                    // markers: 'true',
+                }
+            })
+                .from('footer span', {
+                    opacity: 0,
+                    yPercent: 150,
+                    duration: .5,
+                    stagger: .05,
+                    ease: 'bounce',
+                })
+                .to('footer span', {
+                    opacity: 0,
+                    yPercent: -100,
+                    duration: .5,
+                    delay: 1,
+                    stagger: {
+                        each: 0.05,
+                        from: 'random',
+                    },
+                });
+        
+
+       
 
 
 
